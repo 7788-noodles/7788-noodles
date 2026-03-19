@@ -1,4 +1,4 @@
-<img width="1024" height="1024" alt="logo" src="https://github.com/user-attachments/assets/e45a9ae9-db6b-451b-a333-b638f4b103d7" /><img width="1024" height="1024" alt="logo" src="https://github.com/user-attachments/assets/6199725f-0163-4330-a6b1-71eccd7b2d48" /># 团队介绍
+# 团队介绍
 
 ### 欢迎来到我们的项目仓库！我们是一群热爱代码、追求卓越的同学。
 
@@ -22,8 +22,15 @@
 
 
 # 团队Logo
-<img width="1024" height="1024" alt="logo" src="https://github.com/user-attachments/assets/1b6964fe-2087-48bb-b228-c125cf7311d9" />
-
+<img width="700" height="700" alt="logo" src="https://github.com/user-attachments/assets/1b6964fe-2087-48bb-b228-c125cf7311d9" />
+### 设计理念
+本Logo以“简约科技”为核心设计理念，通过字母与抽象图形的融合，体现软件工程团队的专业性与创新性。
+首先，在图形构建上，将团队名称的首字母进行几何化处理，通过线条切割与结构重组，使其既具备识别性，又呈现出类似电路板的视觉效果，象征软件工程中代码逻辑与系统结构的严谨性。
+其次，在视觉语言上引入“节点”和“连接线”的设计元素，模拟数据流动与信息交互的过程，表达团队在软件开发中对技术连接与系统协同的理解。
+在色彩选择方面，采用深蓝与亮蓝的组合，深蓝代表稳定与专业，亮蓝则象征科技与未来感，两者结合增强整体的层次感与视觉冲击力。
+整体风格遵循极简设计原则，去除冗余装饰，使Logo在不同尺寸和应用场景下均具备良好的识别性与适配性，体现现代软件工程团队高效、理性与创新的特质。
+### 生成过程
+运用Chatgpt，输入了“大学生软件开发团队”“简约”“科技感”等关键词。
 
 
 
