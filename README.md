@@ -1,3 +1,5 @@
+# 团队介绍
+
 ### 欢迎来到我们的项目仓库！我们是一群热爱代码、追求卓越的同学。
 
 在这里，我们相信：
@@ -15,18 +17,10 @@
 - 提交不规范，队友两行泪。
 - 没有完美的个人，但有完美的团队。
 
+---
+# 成员资料
 
-<!--
-**7788-noodles/7788-noodles** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+
+
