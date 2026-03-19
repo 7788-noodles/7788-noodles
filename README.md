@@ -20,6 +20,7 @@
 ---
 # 成员资料
 [成员1--李佳琪](https://github.com/7788-noodles/7788-noodles/blob/main/members/7788-noodles.md)
+
 [成员2--程天润](https://github.com/7788-noodles/7788-noodles/blob/main/members/cc-tr.md)
 
 # 团队Logo
