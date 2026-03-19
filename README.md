@@ -19,7 +19,8 @@
 
 ---
 # 成员资料
-
+[成员1--李佳琪](https://github.com/7788-noodles/7788-noodles/blob/main/members/7788-noodles.md)
+[成员2--程天润](https://github.com/7788-noodles/7788-noodles/blob/main/members/cc-tr.md)
 
 # 团队Logo
 <img width="700" height="700" alt="logo" src="https://github.com/user-attachments/assets/1b6964fe-2087-48bb-b228-c125cf7311d9" />
