@@ -1,4 +1,4 @@
-# 团队介绍
+<img width="1024" height="1024" alt="logo" src="https://github.com/user-attachments/assets/e45a9ae9-db6b-451b-a333-b638f4b103d7" /><img width="1024" height="1024" alt="logo" src="https://github.com/user-attachments/assets/6199725f-0163-4330-a6b1-71eccd7b2d48" /># 团队介绍
 
 ### 欢迎来到我们的项目仓库！我们是一群热爱代码、追求卓越的同学。
 
@@ -22,7 +22,7 @@
 
 
 # 团队Logo
-![](https://github.com/7788-noodles/7788-noodles/blob/main/Logo/logo.png)
+<img width="1024" height="1024" alt="logo" src="https://github.com/user-attachments/assets/1b6964fe-2087-48bb-b228-c125cf7311d9" />
 
 
 
