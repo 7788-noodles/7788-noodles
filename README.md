@@ -23,7 +23,7 @@
 
 [成员2--程天润](https://github.com/7788-noodles/7788-noodles/blob/main/members/cc-tr.md)
 
-[成员3--阿丽热·阿布来克木](https://github.com/7788-noodles/7788-noodles/blob/main/members/Alyra)
+[成员3--阿丽热·阿布来克木](https://github.com/7788-noodles/7788-noodles/blob/main/members/Alyra.md)
 
 ---
 # 团队Logo
