@@ -1,0 +1,48 @@
+<view class="page">
+  <view class="header-card">
+    <view class="header-top">
+      <view class="header-icon">📒</view>
+      <view>
+        <view class="title">账单列表</view>
+        <view class="sub-title">看看最近都把钱花在哪里啦</view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{bills.length === 0}}" class="empty-card">
+    <view class="empty-emoji">🐾</view>
+    <view class="empty-text">还没有账单哦</view>
+    <view class="empty-subtext">先回首页记下一笔吧</view>
+  </view>
+
+  <view wx:for="{{bills}}" wx:key="id" class="bill-card">
+  <view class="bill-top">
+    <view class="category-tag">{{item.category}}</view>
+    <view class="amount">¥{{item.amount}}</view>
+  </view>
+
+  <view class="remark">{{item.remark}}</view>
+
+  <view class="meta-row">
+    <text class="meta-text">{{item.type}}</text>
+    <text class="meta-text">{{item.createdAt}}</text>
+  </view>
+
+  <view class="action-row">
+  <button
+    class="edit-btn"
+    data-id="{{item.id}}"
+    data-amount="{{item.amount}}"
+    data-category="{{item.category}}"
+    data-remark="{{item.remark}}"
+    bindtap="goEdit"
+  >
+    编辑
+  </button>
+
+  <button class="delete-btn" data-id="{{item.id}}" bindtap="deleteBill">
+    删除
+  </button>
+</view>
+</view>
+</view>

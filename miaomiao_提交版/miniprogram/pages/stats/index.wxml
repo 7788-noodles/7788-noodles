@@ -1,0 +1,64 @@
+<view class="page">
+  <view class="header-card">
+    <view class="header-icon">📊</view>
+    <view>
+      <view class="title">消费统计</view>
+      <view class="sub-title">看看你的消费分布吧</view>
+    </view>
+  </view>
+
+  <view class="card summary-card">
+    <view class="stat-item">
+      <view class="stat-label">总支出</view>
+      <view class="stat-value">¥{{totalAmount}}</view>
+    </view>
+
+    <view class="divider"></view>
+
+    <view class="stat-item">
+      <view class="stat-label">账单数量</view>
+      <view class="stat-value">{{billCount}} 条</view>
+    </view>
+  </view>
+
+  <view class="card" wx:if="{{categoryStats.length > 0}}">
+    <view class="section-title">按分类汇总</view>
+
+    <view wx:for="{{categoryStats}}" wx:key="category" class="category-item">
+  <view class="category-row">
+    <view class="category-left">
+      <view class="category-dot"></view>
+      <text class="category-name">{{item.category}}</text>
+    </view>
+    <view class="category-right">
+      <text class="category-percent">{{item.percent}}%</text>
+      <text class="category-amount">¥{{item.amount}}</text>
+    </view>
+  </view>
+
+  <view class="progress-track">
+  <view class="progress-fill" style="{{item.percentWidth}}"></view>
+</view>
+</view>
+  </view>
+
+  <view class="card" wx:if="{{categoryStats.length === 0}}">
+    <view class="empty-text">还没有账单，暂时无法统计分类哦</view>
+  </view>
+  <button class="analyze-btn {{isAnalyzing ? 'analyze-btn-disabled' : ''}}" bindtap="testAnalyze">
+  {{isAnalyzing ? '分析生成中...' : (hasAnalyzed ? '重新生成 AI 分析' : '生成 AI 消费分析')}}
+</button>
+  <view class="card" wx:if="{{aiAnalysis || aiSuggestion}}">
+  <view class="section-title">🤖 AI 消费分析</view>
+
+  <view class="ai-block" wx:if="{{aiAnalysis}}">
+    <view class="ai-label">消费分析</view>
+    <view class="ai-content">{{aiAnalysis}}</view>
+  </view>
+
+  <view class="ai-block" wx:if="{{aiSuggestion}}">
+    <view class="ai-label">消费建议</view>
+    <view class="ai-content">{{aiSuggestion}}</view>
+  </view>
+</view>
+</view>

@@ -1,0 +1,90 @@
+<view class="page">
+  <view class="header-card">
+    <view class="header-top">
+      <view class="logo">🐱</view>
+      <view class="header-text">
+        <view class="app-name">喵喵记账</view>
+        <view class="app-desc">说一句话，轻松记下一笔开销</view>
+      </view>
+    </view>
+
+    <view class="tip-box">
+      <text class="tip-text">试试说：今天中午吃饭花了二十五元</text>
+    </view>
+  </view>
+
+  <view class="section-card">
+    <view class="section-title">✨ 文字记账</view>
+
+    <input
+      class="main-input"
+      placeholder="输入一句话，例如：奶茶花了12元"
+      bindinput="onTextInput"
+      value="{{text}}"
+    />
+
+    <button class="primary-btn" bindtap="goParse">解析这句话</button>
+  </view>
+
+  <view class="section-card">
+    <view class="section-title">🎤 语音记账</view>
+
+    <view class="record-btn-group">
+      <button class="soft-btn" bindtap="startRecord">开始录音</button>
+      <button class="soft-btn" bindtap="stopRecord">结束录音</button>
+    </view>
+
+    <view class="status-text" wx:if="{{audioPath}}">
+      已生成录音文件
+    </view>
+
+    <button class="primary-btn" bindtap="recognizeAudio">识别录音</button>
+
+    <view class="recognized-box" wx:if="{{recognizedText}}">
+      <view class="recognized-title">识别结果</view>
+      <view class="recognized-content">{{recognizedText}}</view>
+    </view>
+  </view>
+
+  <view class="result-card" wx:if="{{parsed}}">
+    <view class="section-title">📒 解析结果</view>
+
+    <view class="result-row">
+      <text class="result-label">类型</text>
+      <text class="result-value">{{parsed.type}}</text>
+    </view>
+
+    <view class="result-row">
+      <text class="result-label">金额</text>
+      <text class="result-value">¥{{parsed.amount}}</text>
+    </view>
+
+    <view class="result-row">
+      <text class="result-label">分类</text>
+      <text class="result-value">{{parsed.category}}</text>
+    </view>
+
+    <view class="result-row">
+      <text class="result-label">备注</text>
+      <text class="result-value">{{parsed.remark}}</text>
+    </view>
+
+    <button class="save-btn" bindtap="saveBill">保存账单</button>
+  </view>
+
+  <view class="section-card" wx:if="{{recentBills.length > 0}}">
+  <view class="section-title">🕘 最近 3 条账单</view>
+
+  <view wx:for="{{recentBills}}" wx:key="id" class="recent-item">
+    <view class="recent-top">
+      <text class="recent-category">{{item.category}}</text>
+      <text class="recent-amount">¥{{item.amount}}</text>
+    </view>
+    <view class="recent-remark">{{item.remark}}</view>
+    <view class="recent-time">{{item.createdAt}}</view>
+  </view>
+</view>
+
+  <button class="list-btn" bindtap="goBills">查看账单列表</button>
+  <button class="stats-btn" bindtap="goStats">查看消费统计</button>
+</view>

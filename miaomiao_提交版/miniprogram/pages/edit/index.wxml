@@ -1,0 +1,22 @@
+<view class="page">
+  <view class="card">
+    <view class="title">编辑账单</view>
+
+    <view class="field">
+      <view class="label">金额</view>
+      <input class="input" type="digit" value="{{amount}}" bindinput="onAmountInput" />
+    </view>
+
+    <view class="field">
+      <view class="label">分类</view>
+      <input class="input" value="{{category}}" bindinput="onCategoryInput" />
+    </view>
+
+    <view class="field">
+      <view class="label">备注</view>
+      <input class="input" value="{{remark}}" bindinput="onRemarkInput" />
+    </view>
+
+    <button class="save-btn" bindtap="saveEdit">保存修改</button>
+  </view>
+</view>

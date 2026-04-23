@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/bills/index",
+    "pages/edit/index",
+    "pages/stats/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "喵喵记账",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.record": {
+      "desc": "用于语音记账录音"
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
+}
