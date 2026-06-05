@@ -1,0 +1,88 @@
+page {
+  background: #fff7fb;
+}
+
+.page {
+  padding: 24rpx;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 24rpx;
+  box-shadow: 0 8rpx 20rpx rgba(233, 197, 214, 0.14);
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #5f4b5b;
+  margin-bottom: 24rpx;
+}
+
+.field {
+  margin-bottom: 24rpx;
+}
+
+.label {
+  font-size: 28rpx;
+  color: #7a5567;
+  margin-bottom: 12rpx;
+}
+
+.input {
+  height: 84rpx;
+  background: #fff7fb;
+  border: 2rpx solid #ffd6e8;
+  border-radius: 18rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  box-sizing: border-box;
+}
+
+.type-switch {
+  display: flex;
+  gap: 20rpx;
+}
+
+.type-option {
+  flex: 1;
+  height: 72rpx;
+  line-height: 72rpx;
+  padding: 0;
+  margin: 0;
+  border-radius: 999rpx;
+  border: 2rpx solid #f6bfd6;
+  background: #fff7fb;
+  color: #7a5567;
+  font-size: 28rpx;
+}
+
+.type-option::after {
+  border: none;
+}
+
+.type-option-active {
+  background: #ff6fa7;
+  color: #ffffff;
+  border-color: #ff6fa7;
+}
+
+.type-option-income-active {
+  background: #20a66a;
+  color: #ffffff;
+  border-color: #20a66a;
+}
+
+.save-btn {
+  margin-top: 20rpx;
+  background: #ff6fa7;
+  color: #ffffff;
+  border-radius: 999rpx;
+  font-size: 30rpx;
+  border: none;
+}
+
+.save-btn::after {
+  border: none;
+}

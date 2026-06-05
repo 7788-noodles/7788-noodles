@@ -1,0 +1,111 @@
+<view class="page">
+  <view class="header-card">
+    <view class="header-icon">📊</view>
+    <view>
+      <view class="title">账单统计</view>
+      <view class="sub-title">按月份查看收入、支出和结余</view>
+    </view>
+  </view>
+
+  <view class="month-card">
+    <view class="month-label">统计月份</view>
+    <picker mode="selector" range="{{monthOptions}}" value="{{selectedMonthIndex}}" bindchange="onMonthChange">
+      <view class="month-picker">
+        <text>{{selectedMonth}}</text>
+        <text class="month-arrow">切换</text>
+      </view>
+    </picker>
+  </view>
+
+  <view class="card summary-card">
+    <view class="stat-item">
+      <view class="stat-label">总收入</view>
+      <view class="stat-value income-text">+¥{{totalIncome}}</view>
+    </view>
+
+    <view class="divider"></view>
+
+    <view class="stat-item">
+      <view class="stat-label">总支出</view>
+      <view class="stat-value expense-text">-¥{{totalExpense}}</view>
+    </view>
+
+    <view class="divider"></view>
+
+    <view class="stat-item">
+      <view class="stat-label">结余</view>
+      <view class="stat-value {{balance >= 0 ? 'income-text' : 'expense-text'}}">¥{{balance}}</view>
+    </view>
+
+    <view class="divider"></view>
+
+    <view class="stat-item">
+      <view class="stat-label">账单数量</view>
+      <view class="stat-value">{{billCount}} 笔</view>
+    </view>
+  </view>
+
+  <view class="card" wx:if="{{expenseCategoryStats.length > 0}}">
+    <view class="section-title">支出分类</view>
+
+    <view wx:for="{{expenseCategoryStats}}" wx:key="category" class="category-item">
+      <view class="category-row">
+        <view class="category-left">
+          <view class="category-dot expense-dot"></view>
+          <text class="category-name">{{item.category}}</text>
+        </view>
+        <view class="category-right">
+          <text class="category-percent">{{item.percent}}%</text>
+          <text class="category-amount expense-text">-¥{{item.amount}}</text>
+        </view>
+      </view>
+
+      <view class="progress-track">
+        <view class="progress-fill expense-fill" style="{{item.percentWidth}}"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="card" wx:if="{{incomeCategoryStats.length > 0}}">
+    <view class="section-title">收入分类</view>
+
+    <view wx:for="{{incomeCategoryStats}}" wx:key="category" class="category-item">
+      <view class="category-row">
+        <view class="category-left">
+          <view class="category-dot income-dot"></view>
+          <text class="category-name">{{item.category}}</text>
+        </view>
+        <view class="category-right">
+          <text class="category-percent">{{item.percent}}%</text>
+          <text class="category-amount income-text">+¥{{item.amount}}</text>
+        </view>
+      </view>
+
+      <view class="progress-track">
+        <view class="progress-fill income-fill" style="{{item.percentWidth}}"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="card" wx:if="{{expenseCategoryStats.length === 0 && incomeCategoryStats.length === 0}}">
+    <view class="empty-text">{{selectedMonth}} 暂无账单数据。</view>
+  </view>
+
+  <button class="analyze-btn {{isAnalyzing ? 'analyze-btn-disabled' : ''}}" bindtap="testAnalyze">
+    {{isAnalyzing ? 'AI 分析中...' : (hasAnalyzed ? '重新分析 AI 账单' : 'AI 账单分析')}}
+  </button>
+
+  <view class="card" wx:if="{{aiAnalysis || aiSuggestion}}">
+    <view class="section-title">AI 账单分析</view>
+
+    <view class="ai-block" wx:if="{{aiAnalysis}}">
+      <view class="ai-label">分析</view>
+      <view class="ai-content">{{aiAnalysis}}</view>
+    </view>
+
+    <view class="ai-block" wx:if="{{aiSuggestion}}">
+      <view class="ai-label">建议</view>
+      <view class="ai-content">{{aiSuggestion}}</view>
+    </view>
+  </view>
+</view>
